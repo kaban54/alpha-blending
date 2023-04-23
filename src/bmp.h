@@ -62,6 +62,8 @@ void read_bmp_info_header (FILE *file, BMP_INFO_HEADER *bmpih);
 void write_bmp_file_header (FILE *file, BMP_FILE_HEADER *bmpfh);
 void write_bmp_info_header (FILE *file, BMP_INFO_HEADER *bmpih);
 
+void GetBlendedImg (BmpImage *back_img, BmpImage *front_img, BmpImage *result_img);
+
 void ImgDtor (BmpImage *img);
 
 #endif

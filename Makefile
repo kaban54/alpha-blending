@@ -22,6 +22,14 @@ obj/v1.o: src/v1.cpp
 obj/v2.o: src/v2.cpp
 	$(CC) -o obj/v2.o src/v2.cpp -c $(CFLAGS)
 
+
+blend: obj/blend.o obj/bmp.o
+	$(CC) -o blend obj/blend.o obj/bmp.o
+
+obj/blend.o: src/blend.cpp
+	$(CC) -o obj/blend.o src/blend.cpp -c $(CFLAGS)
+
+
 clean:
 	rm obj/*.o -f
 	clear
