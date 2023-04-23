@@ -4,17 +4,17 @@ SFMLFLAGS += -lsfml-graphics -lsfml-window -lsfml-system
 
 all: v1 v2
 
-v1: obj/v1.o obj/bmp.o obj/alpha.o
-	$(CC) -o v1 obj/v1.o obj/bmp.o obj/alpha.o $(SFMLFLAGS)
+v1: obj/v1.o obj/bmp.o obj/main.o
+	$(CC) -o v1 obj/v1.o obj/bmp.o obj/main.o $(SFMLFLAGS)
 
-v2: obj/v2.o obj/bmp.o obj/alpha.o
-	$(CC) -o v2 obj/v2.o obj/bmp.o obj/alpha.o $(SFMLFLAGS)
+v2: obj/v2.o obj/bmp.o obj/main.o
+	$(CC) -o v2 obj/v2.o obj/bmp.o obj/main.o $(SFMLFLAGS)
 
 obj/bmp.o: src/bmp.cpp
 	$(CC) -o obj/bmp.o src/bmp.cpp -c $(CFLAGS)
 
-obj/alpha.o: src/alpha.cpp
-	$(CC) -o obj/alpha.o src/alpha.cpp -c $(CFLAGS)
+obj/main.o: src/main.cpp
+	$(CC) -o obj/main.o src/main.cpp -c $(CFLAGS)
 
 obj/v1.o: src/v1.cpp
 	$(CC) -o obj/v1.o src/v1.cpp -c $(CFLAGS)
